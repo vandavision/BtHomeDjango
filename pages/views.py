@@ -1,6 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('Hi')
+    template_name = 'pages/index.html'
+    return render(request, template_name)
+
+
+def about(request):
+    return render(request, "pages/about.html")
